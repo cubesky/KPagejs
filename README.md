@@ -36,4 +36,4 @@ val routefunction = object : RouteFunction {
 ```
 
 ## LICENSE
-]MIT](https://github.com/cubesky/KPagejs/blob/master/LICENSE)
+[MIT](https://github.com/cubesky/KPagejs/blob/master/LICENSE)
