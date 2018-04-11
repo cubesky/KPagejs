@@ -3,6 +3,7 @@ package kpagejs
 class KPagejs {
     class Next {  }
     companion object {
+        fun current() : String = js("page.current").unsafeCast<String>()
         fun addRoute(route: String, callback: RouteFunction) {
             js("page(route,callback.call)")
         }
@@ -22,11 +23,12 @@ class KPagejs {
             js("page.base(base)")
         }
     }
-    var path : String? = null
-    var querystring : String? = null
-    var pathname : String? = null
+    lateinit var path : String
+    lateinit var querystring : String
+    lateinit var pathname : String
     var params : dynamic = null
     var state : dynamic = null
+    var init : Boolean? = null
     fun save() {}
     interface RouteFunction {
         @JsName("call")
